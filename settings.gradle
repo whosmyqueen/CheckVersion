@@ -1,24 +1,27 @@
 pluginManagement {
     repositories {
+        gradlePluginPortal()
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url 'https://jitpack.io' }
-        maven { url "https://alight-maven.pkg.coding.net/repository/aoa/maven/" }
-        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        google()
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        mavenCentral()
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/central' }
         maven { url 'https://maven.aliyun.com/repository/public' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url 'https://jitpack.io' }
-        maven { url "https://alight-maven.pkg.coding.net/repository/aoa/maven/" }
-        mavenCentral()
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        google()
     }
 }
 include ':checkversion', "sample"
