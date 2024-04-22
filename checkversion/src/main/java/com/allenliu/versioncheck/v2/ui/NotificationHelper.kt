@@ -169,7 +169,7 @@ class NotificationHelper(private val context: Context) {
         builder.setAutoCancel(true)
         builder.setSmallIcon(versionBuilder.notificationBuilder.icon)
         //set content title
-        var contentTitle: String? = context.getString(R.string.app_name)
+        var contentTitle: String? = context.getString(R.string.versionchecklib_app_name)
         if (libNotificationBuilder.contentTitle != null) contentTitle =
             libNotificationBuilder.contentTitle
         builder.setContentTitle(contentTitle)
@@ -193,7 +193,7 @@ class NotificationHelper(private val context: Context) {
 
     private fun createInstallNotification(): NotificationCompat.Builder {
         val notifcationBuilder = NotificationCompat.Builder(context, channelid)
-            .setContentTitle(context.getString(R.string.app_name))
+            .setContentTitle(context.getString(R.string.versionchecklib_app_name))
             .setContentText(context.getString(R.string.versionchecklib_version_service_runing))
             .setAutoCancel(false)
 
@@ -234,7 +234,7 @@ class NotificationHelper(private val context: Context) {
 
         fun createSimpleNotification(context: Context): Notification {
             val notifcationBuilder = NotificationCompat.Builder(context, channelid)
-                .setContentTitle(context.getString(R.string.app_name))
+                .setContentTitle(context.getString(R.string.versionchecklib_app_name))
                 .setContentText(context.getString(R.string.versionchecklib_version_service_runing))
                 .setAutoCancel(false)
 
