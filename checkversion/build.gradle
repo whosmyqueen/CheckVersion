@@ -9,6 +9,9 @@ android {
     defaultConfig {
         minSdk 21
         targetSdk 34
+        aarMetadata {
+            minCompileSdk = 21
+        }
     }
 
     buildTypes {
@@ -28,8 +31,25 @@ android {
     lint {
         abortOnError false
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
 }
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.whosmyqueen'
+            artifactId = 'checkversion'
+            version = '1.0'
 
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.6.1'
