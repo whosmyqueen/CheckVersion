@@ -1,1 +1,24 @@
-include ':library', "sample"
+pluginManagement {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://jitpack.io' }
+        maven { url "https://alight-maven.pkg.coding.net/repository/aoa/maven/" }
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://jitpack.io' }
+        maven { url "https://alight-maven.pkg.coding.net/repository/aoa/maven/" }
+        mavenCentral()
+    }
+}
+include ':checkversion', "sample"

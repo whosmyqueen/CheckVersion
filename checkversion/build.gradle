@@ -1,17 +1,16 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-android.buildFeatures.buildConfig true
 android {
     compileSdk 34
-    namespace 'com.allenliu.sample'
+    namespace 'com.allenliu.versioncheck'
+    resourcePrefix "versioncheck"
     defaultConfig {
-        applicationId "com.allenliu.sample"
         minSdk 21
         targetSdk 34
-        versionCode 1
-        versionName "1.0"
     }
+
     buildTypes {
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -24,13 +23,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    lint {
+        abortOnError false
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    //    implementation 'com.github.AlexLiuSheng:CheckVersionLib:2.2.2'
-    implementation project(':checkversion')
-    implementation('com.squareup.leakcanary:leakcanary-android:2.14')
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'org.greenrobot:eventbus:3.3.1'
+    implementation "androidx.annotation:annotation:1.7.1"
 }

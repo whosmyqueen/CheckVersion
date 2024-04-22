@@ -16,15 +16,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.allenliu.sample.R;
 import com.allenliu.sample.v1.BaseDialog;
-import com.allenliu.versionchecklib.callback.OnCancelListener;
-import com.allenliu.versionchecklib.v2.AllenVersionChecker;
-import com.allenliu.versionchecklib.v2.builder.DownloadBuilder;
-import com.allenliu.versionchecklib.v2.builder.NotificationBuilder;
-import com.allenliu.versionchecklib.v2.builder.UIData;
-import com.allenliu.versionchecklib.v2.callback.CustomDownloadFailedListener;
-import com.allenliu.versionchecklib.v2.callback.CustomDownloadingDialogListener;
-import com.allenliu.versionchecklib.v2.callback.CustomVersionDialogListener;
-import com.allenliu.versionchecklib.v2.callback.RequestVersionListener;
+import com.allenliu.versioncheck.callback.OnCancelListener;
+import com.allenliu.versioncheck.v2.AllenVersionChecker;
+import com.allenliu.versioncheck.v2.builder.DownloadBuilder;
+import com.allenliu.versioncheck.v2.builder.NotificationBuilder;
+import com.allenliu.versioncheck.v2.builder.UIData;
+import com.allenliu.versioncheck.v2.callback.CustomDownloadFailedListener;
+import com.allenliu.versioncheck.v2.callback.CustomDownloadingDialogListener;
+import com.allenliu.versioncheck.v2.callback.CustomVersionDialogListener;
+import com.allenliu.versioncheck.v2.callback.RequestVersionListener;
 
 public class V2Activity extends AppCompatActivity {
 
