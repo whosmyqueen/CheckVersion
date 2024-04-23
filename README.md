@@ -38,7 +38,7 @@ allprojects {
 ```
 
 dependencies {
-	        implementation 'com.github.AlexLiuSheng:CheckVersionLib:2.4.2'
+	        implementation 'com.github.whosmyqueen:CheckVersion:1.0.9'
 	}
 ```
 
