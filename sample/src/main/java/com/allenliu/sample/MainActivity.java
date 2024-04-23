@@ -8,6 +8,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.allenliu.sample.v2.V2Activity;
 
+/**
+ * 主要活动
+ *
+ * @author whosmyqueen
+ * @date 2024/04/23
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -27,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
 
                 break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + view.getId());
         }
     }
 }
