@@ -28,18 +28,18 @@ The strongest feature is easier to integrate than version  of V1.+
 ### include
 ```
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 ```
 
 dependencies {
-	        implementation 'com.github.whosmyqueen:CheckVersion:1.0.9'
-	}
+	implementation 'com.github.whosmyqueen:CheckVersion:1.0.9'
+}
 ```
 
 ### usage
